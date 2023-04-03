@@ -9,7 +9,50 @@
   <title>Flexbox Froggy</title>
 </head>
 <body>
-  
+
+<div class="app">
+  <section id="instructions">
+    <h1>Flexbox Froggy</h1>
+    <h3>
+      Help Frogs Army find their lilypads using
+    </h3>
+    <p id="round-details"></p>
+    <div class="editor">
+      <div class="line-numbers">1.<br>2.<br>3.<br>4.<br>5.<br>6.<br>7.<br>8.<br>9.<br>10.<br></div>
+      <pre>#pond {
+    display: flex;</pre>
+      <textarea onkeyup="addCSS()"></textarea>
+      <pre>}</pre>
+      <button>Next</button>
+    </div>
+    <h1 id="round"></h1>
+  </section>
+  <section id="pond">
+    <div id="foreground" class="">
+      <div class="frog-container">
+        <div class="frog green animated-pulse infinite"></div>
+      </div>
+      <div class="frog-container">
+        <div class="frog red animated-pulse infinite"></div>
+      </div>
+      <div class="frog-container">
+        <div class="frog yellow animated-pulse infinite"></div>
+      </div>
+    </div>
+    <div id="background" class="">
+
+      <div class="lily-container">
+        <div class="lily green" style="transform: scale(0.88) rotate(322deg);"></div>
+      </div>
+      <div class="lily-container">
+        <div class="lily red" style="transform: rotate(120deg);"></div>
+      </div>
+      <div class="lily-container">
+        <div class="lily yellow" style="transform: scale(0.95) rotate(280deg);"></div>
+      </div>
+    </div>
+  </section>
+</div>
 
   <!-- js script -->
   <script src="./app.js"></script>

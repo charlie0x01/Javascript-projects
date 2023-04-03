@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=Source+Code+Pro:wght@200;300;400;500&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(67, 160, 71);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.app {
+  display: flex;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-family: "Fredoka", cursive;
+}
+
+p,
+h3,
+h4,
+h5 {
+  font-family: "PT Sans", sans-serif;
+}
+
+.help {
+  font-family: "Source Code Pro", monospace;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
+}
+
+#instructions {
+  padding: 30px;
+  width: 50%;
+}
+
+#pond {
+  background-color: rgb(31, 87, 104);
+  width: 50vw;
+  height: 50vw;
+  border-bottom-left-radius: 30px;
+  overflow: hidden;
+  min-width: 300px;
+  min-height: 300px;
+  position: relative;
+}
+
+.editor {
+  position: relative;
+  background-color: rgb(224, 224, 224);
+  height: 260px;
+  padding: 10px 10px 10px 50px;
+  border-radius: 4px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(119, 119, 119);
+  overflow: hidden;
+}
+
+.line-numbers {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgb(153, 153, 153);
+  color: rgb(213, 213, 213);
+  padding: 10px 6px;
+  height: 100%;
+  text-align: right;
+}
+
+pre {
+  margin: 0;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  overflow: none;
+  resize: none;
+  margin-left: 35px;
+  width: 80%;
+  height: 50%;
+}
+
+button {
+  background-color: rgb(289, 22, 6);
+  padding: 6px 8px;
+  border: none;
+  border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+#foreground,
+#background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 95%;
+  height: 95%;
+  padding: 2.5%;
+  display: flex;
+}
+
+#foreground {
+  z-index: 99;
+}
+
+.round-1-solution {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.lily-container,
+.frog-container {
+  width: 20%;
+  height: 20%;
+}
+
+.lily,
+.frog {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.frog {
+  background-size: 60% 60%;
+}
+
+.lily.green {
+  background-image: url("./assets/lilypad-green.svg");
+}
+
+.lily.red {
+  background-image: url("./assets/lilypad-red.svg");
+}
+
+.lily.yellow {
+  background-image: url("./assets/lilypad-yellow.svg");
+}
+
+.frog.green {
+  background-image: url("./assets/frog-green.svg");
+}
+.frog.red {
+  background-image: url("./assets/frog-red.svg");
+}
+.frog.yellow {
+  background-image: url("./assets/frog-yellow.svg");
+}
+
+.animated-pulse {
+  animation-duration: 1s;
+  animation-name: pulse;
+  animation-fill-mode: both;
+}
+
+.animated-pulse.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* rounds */
+.round-1 {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.round-2 {
+  flex-direction: row-reverse;
+}
+
+.round-3 {
+  flex-direction: column-reverse;
+}
+
+.round-4 {
+  align-items: center;
+  justify-content: space-around;
+}
+
+.round-5 {
+  justify-content: end;
+  flex-direction: row-reverse;
+}
+.round-6 {
+  justify-content: space-evenly;
+  align-items: center;
+}
+.round-7 {
+  justify-content: space-evenly;
+  align-items: end;
+}
+.round-8 {
+  flex-wrap: wrap;
+  gap: 10%;
+}
